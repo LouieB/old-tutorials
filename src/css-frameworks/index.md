@@ -71,9 +71,15 @@ Package managers are command-line programs that consult online directories of av
 
 In the web development space, the most commonly-used package managers are [`npm`](https://www.npmjs.com/) and [`bower`](https://bower.io/). The former was originally created for the server-side Node.js environment, while the latter was a fork of the former, adjusted for the special needs of client-side web development projects. Since then, `npm` has expanded to include both server and client-side packages, so these days you can use either in most circumstances.
 
-Let's see how we can use `bower` to install the Bootstrap CSS framework.
+Let's see how we can use `bower` to install the Bootstrap CSS framework. Bower is installed using the `npm` package manager, so to install bower, you first need to [install Node.js](https://nodejs.org/en/), which installs `npm`. Once you have Node.js, install bower by running this at your command prompt from any directory:
 
-To use `bower` in a project, you first run this command within your project directory to create the file it uses to track meta-data about your project, including the packages your project depends on:
+```bash
+$ sudo npm install -g bower
+```
+
+> **Windows Users**: you don't need the `sudo` part of that command. Just execute `npm install -g bower`
+
+To use `bower` in a project, you first run this command **within your project directory** to create the file it uses to track meta-data about your project, including the packages your project depends on:
 
 ```bash
 $ bower init
